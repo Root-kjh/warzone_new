@@ -2,17 +2,18 @@
   "name": "warzone",
   "version": "2.0.0",
   "description": "webhacking wargame",
-  "main": "src/index.js",
+  "main": "index.js",
   "repository": "https://github.com/Root-kjh/warzone_new.git",
   "author": "JONGHYUN KIM <wldnro3141@gmail.com>",
   "license": "GNU",
   "dependencies": {
-    "koa": "^2.13.1"
+    "koa": "^2.13.1",
+    "koa-router": "^10.0.0"
   },
   "devDependencies": {
     "eslint": "^7.24.0"
   },
-  "scripts":{
+  "scripts": {
     "start": "node src",
     "start:dev": "nodemon --watch src/ src/index.js"
   }
