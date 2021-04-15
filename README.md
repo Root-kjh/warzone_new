@@ -1,2 +1,2 @@
 # warzone_new
-django로 제작한 new warzone
+koa로 제작한 new warzone
