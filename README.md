@@ -223,7 +223,7 @@ HTTP/1.1 401 Unauthorized
 * request
 
 ```http
-PATCH http://kjh-projects.kor.kr:4100/users/{userId}/props/{propId} HTTP/1.1
+POST http://kjh-projects.kor.kr:4100/users/{userId}/props/{propId} HTTP/1.1
 Authentication: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 {
     "flag": "FLAG{test_Flag}"
