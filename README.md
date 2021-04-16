@@ -15,14 +15,14 @@ koa로 제작한 new warzone
 * [updateUserInfo](#updateUserInfo)
 * [updatePassword](#updatePassword)
 * [withdraw](#withdraw)
-* [authProp](#authProp)
+* [authProb](#authProb)
 
-#### Props
+#### Probs
 
-* [createProp](#createProp)
-* [getPropInfo](#getPropInfo)
-* [updateProp](#updateProp)
-* [deleteProp](#deleteProp)
+* [createProb](#createProb)
+* [getProbInfo](#getProbInfo)
+* [updateProb](#updateProb)
+* [deleteProb](#deleteProb)
 
 #### Rank
 
@@ -218,12 +218,12 @@ HTTP/1.1 401 Unauthorized
 }
 ```
 
-#### authProp
+#### authProb
 
 * request
 
 ```http
-PATCH http://kjh-projects.kor.kr:4100/warzone/users/{userId}/props/{propId} HTTP/1.1
+PATCH http://kjh-projects.kor.kr:4100/warzone/users/{userId}/probs/{probId} HTTP/1.1
 Authentication: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 {
     "flag": "FLAG{test_Flag}"
@@ -242,7 +242,7 @@ HTTP/1.1 200 OK
 ```http
 HTTP/1.1 404 Not Found
 {
-    "message": "no such props"
+    "message": "no such probs"
 }
 ```
 ```http
@@ -258,13 +258,13 @@ HTTP/1.1 400 Bad Request
 }
 ```
 
-#### createProp
+#### createProb
 
 
 * request
 
 ```http
-POST http://kjh-projects.kor.kr:4100/warzone/props HTTP/1.1
+POST http://kjh-projects.kor.kr:4100/warzone/probs HTTP/1.1
 Authentication: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 {
     "title": "test_title",
@@ -305,13 +305,13 @@ HTTP/1.1 400 Bad Request
 }
 ```
 
-#### getPropInfo
+#### getProbInfo
 
 
 * request
 
 ```http
-GET http://kjh-projects.kor.kr:4100/warzone/props/{propId} HTTP/1.1
+GET http://kjh-projects.kor.kr:4100/warzone/probs/{probId} HTTP/1.1
 ```
 
 * response
@@ -327,17 +327,17 @@ HTTP/1.1 200 OK
 ```http
 HTTP/1.1 404 Not Found
 {
-    "message": "no such props"
+    "message": "no such probs"
 }
 ```
 
-#### updateProp
+#### updateProb
 
 
 * request
 
 ```http
-PUT http://kjh-projects.kor.kr:4100/warzone/props/{propId} HTTP/1.1
+PUT http://kjh-projects.kor.kr:4100/warzone/probs/{probId} HTTP/1.1
 Authentication: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 {
     "title": "test_title",
@@ -362,7 +362,7 @@ HTTP/1.1 200 OK
 ```http
 HTTP/1.1 404 Not Found
 {
-    "message": "no such props"
+    "message": "no such probs"
 }
 ```
 ```http
@@ -384,13 +384,13 @@ HTTP/1.1 400 Bad Request
 }
 ```
 
-#### deleteProp
+#### deleteProb
 
 
 * request
 
 ```http
-DELETE http://kjh-projects.kor.kr:4100/warzone/props/{propId} HTTP/1.1
+DELETE http://kjh-projects.kor.kr:4100/warzone/probs/{probId} HTTP/1.1
 Authentication: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 ```
 
@@ -404,7 +404,7 @@ HTTP/1.1 200 OK
 ```http
 HTTP/1.1 404 Not Found
 {
-    "message": "no such props"
+    "message": "no such probs"
 }
 ```
 ```http
