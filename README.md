@@ -32,7 +32,7 @@ koa로 제작한 new warzone
 
 * request
 ```http
-POST http://kjh-projects.kor.kr:4100/warzone/auth/signup HTTP/1.1
+POST http://kjh-projects.kor.kr:4100/auth/signup HTTP/1.1
 {
     "username": "john",
     "email": "test@gmail.com",
@@ -69,7 +69,7 @@ HTTP/1.1 400 Bad Request
 * request
 
 ```http
-POST http://kjh-projects.kor.kr:4100/warzone/auth/signin HTTP/1.1
+POST http://kjh-projects.kor.kr:4100/auth/signin HTTP/1.1
 {
     "username": "john",
     "password": "test_password"
@@ -100,7 +100,7 @@ HTTP/1.1 400 Bad Request
 * request
 
 ```http
-GET http://kjh-projects.kor.kr:4100/warzone/users/{username} HTTP/1.1
+GET http://kjh-projects.kor.kr:4100/users/{username} HTTP/1.1
 ```
 
 * response
@@ -127,7 +127,7 @@ HTTP/1.1 404 Not Found
 * request
 
 ```http
-PUT http://kjh-projects.kor.kr:4100/warzone/users/{userId} HTTP/1.1
+PUT http://kjh-projects.kor.kr:4100/users/{userId} HTTP/1.1
 Authentication: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 {
     "email": "newemail@gmai.com"
@@ -161,7 +161,7 @@ HTTP/1.1 401 Unauthorized
 * request
 
 ```http
-PATCH http://kjh-projects.kor.kr:4100/warzone/users/{userId} HTTP/1.1
+PATCH http://kjh-projects.kor.kr:4100/users/{userId} HTTP/1.1
 Authentication: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 {
     "password": "newpassword"
@@ -194,7 +194,7 @@ HTTP/1.1 401 Unauthorized
 * request
 
 ```http
-DELETE http://kjh-projects.kor.kr:4100/warzone/users/{userId} HTTP/1.1
+DELETE http://kjh-projects.kor.kr:4100/users/{userId} HTTP/1.1
 Authentication: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 ```
 
@@ -223,7 +223,11 @@ HTTP/1.1 401 Unauthorized
 * request
 
 ```http
+<<<<<<< HEAD
 PATCH http://kjh-projects.kor.kr:4100/warzone/users/{userId}/probs/{probId} HTTP/1.1
+=======
+POST http://kjh-projects.kor.kr:4100/users/{userId}/props/{propId} HTTP/1.1
+>>>>>>> d1a79782fd7c1b18bfeb9db79e4df71bad724a8a
 Authentication: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 {
     "flag": "FLAG{test_Flag}"
@@ -264,7 +268,11 @@ HTTP/1.1 400 Bad Request
 * request
 
 ```http
+<<<<<<< HEAD
 POST http://kjh-projects.kor.kr:4100/warzone/probs HTTP/1.1
+=======
+POST http://kjh-projects.kor.kr:4100/props HTTP/1.1
+>>>>>>> d1a79782fd7c1b18bfeb9db79e4df71bad724a8a
 Authentication: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 {
     "title": "test_title",
@@ -311,7 +319,11 @@ HTTP/1.1 400 Bad Request
 * request
 
 ```http
+<<<<<<< HEAD
 GET http://kjh-projects.kor.kr:4100/warzone/probs/{probId} HTTP/1.1
+=======
+GET http://kjh-projects.kor.kr:4100/props/{propId} HTTP/1.1
+>>>>>>> d1a79782fd7c1b18bfeb9db79e4df71bad724a8a
 ```
 
 * response
@@ -337,7 +349,11 @@ HTTP/1.1 404 Not Found
 * request
 
 ```http
+<<<<<<< HEAD
 PUT http://kjh-projects.kor.kr:4100/warzone/probs/{probId} HTTP/1.1
+=======
+PUT http://kjh-projects.kor.kr:4100/props/{propId} HTTP/1.1
+>>>>>>> d1a79782fd7c1b18bfeb9db79e4df71bad724a8a
 Authentication: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 {
     "title": "test_title",
@@ -390,7 +406,11 @@ HTTP/1.1 400 Bad Request
 * request
 
 ```http
+<<<<<<< HEAD
 DELETE http://kjh-projects.kor.kr:4100/warzone/probs/{probId} HTTP/1.1
+=======
+DELETE http://kjh-projects.kor.kr:4100/props/{propId} HTTP/1.1
+>>>>>>> d1a79782fd7c1b18bfeb9db79e4df71bad724a8a
 Authentication: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 ```
 
@@ -419,14 +439,14 @@ HTTP/1.1 401 Unauthorized
 * request
 
 ```http
-GET http://kjh-projects.kor.kr:4100/warzone/rank HTTP/1.1
+GET http://kjh-projects.kor.kr:4100/rank HTTP/1.1
 ```
 
 * response
 ```http
 HTTP/1.1 200 OK
 {
-    userList: [
+    "userList": [
         {"username":"john", "score": 200},
         {"username":"mark", "score": 150},
         {"username":"dean", "score": 100},
