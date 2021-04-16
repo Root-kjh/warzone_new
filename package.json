@@ -8,15 +8,18 @@
   "license": "GNU",
   "dependencies": {
     "koa": "^2.13.1",
-    "koa-router": "^10.0.0"
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^10.0.0",
+    "mongoose": "^5.12.4"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "eslint": "^7.24.0"
   },
   "scripts": {
-    "start": "node --exec babel-node src",
-    "start:dev": "nodemon --exec babel-node src/index.js"
+    "start": "NODE_PATH=src node --exec babel-node src",
+    "start:dev": "cross-env NODE_PATH=src nodemon --exec babel-node src/index.js"
   }
 }
