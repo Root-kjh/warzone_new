@@ -16,12 +16,7 @@
     "eslint": "^7.24.0"
   },
   "scripts": {
-<<<<<<< HEAD
     "start": "node --exec babel-node src",
     "start:dev": "nodemon --exec babel-node src/index.js"
-=======
-    "start": "node src",
-    "start:dev": "nodemon --watch src/ src/index.js"
->>>>>>> d1a79782fd7c1b18bfeb9db79e4df71bad724a8a
   }
 }

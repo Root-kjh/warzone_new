@@ -1,10 +1,20 @@
-const Koa = require('koa');
+import Koa from 'koa';
+import Router from 'koa-router';
+import auth from './auth';
+import probs from './probs';
+import users from './users';
+import rank from './rank';
+
 const app = new Koa();
+const router = new Router();
 
-app.use(ctx => {
-    ctx.body = 'Hello Koa';
-});
+router.use('/auth', auth.routes());
+router.use('/users', users.routes());
+router.use('/probs', probs.routes());
+router.use('/rank', rank.routes());
 
-app.listen(4000, () => {
-    console.log('heurm server is listening to port 4000');
+app.use(router.routes()).use(router.allowedMethods());
+
+app.listen(4100, () => {
+    console.log('listening to port 4100');
 });
