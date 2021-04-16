@@ -111,7 +111,8 @@ HTTP/1.1 200 OK
     "username": "john",
     "email": "test@gmail.com",
     "score": 100,
-    "rank": 25
+    "rank": 25,
+    "solvedProb": [{"id": "mongoIdx", "title": "title", "score": "score"}]
 }
 ```
 ```http
