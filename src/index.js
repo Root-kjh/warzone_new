@@ -5,6 +5,17 @@ import auth from './auth';
 import probs from './probs';
 import users from './users';
 import rank from './rank';
+import mysql from './db/mysql';
+
+mysql.sequelize.sync()
+.then(() => {
+    console.log("mysql connection success");
+})
+.catch(err => {
+    console.log(err);
+    console.log("mysql connection failed");
+    process.exit();
+})
 
 const app = new Koa();
 const router = new Router();
