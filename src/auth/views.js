@@ -1,5 +1,6 @@
 import mysql from '../db/mysql';
 import crypto from 'crypto';
+import { userExistError } from '../lib/errors';
 
 export const signin = (username, password) => {
 
@@ -10,17 +11,18 @@ export const signup = (username, email, password) => {
         where: {username: username}
     })
     .then(user => {
-        console.log(user);
         if (user==null){
+            var userInfo;
             mysql.users.create({
                 username: username,
                 email: email,
                 password: crypto.createHash('sha512').update(password).digest('hex')
             })
-            .then(result => {return result;});
+            .then(result => {console.log(result.dataValues);userInfo = result.dataValues;});
+            return userInfo;
         }
         else{
-            throw {name: "userExistError", message: "user exist"};
+            throw userExistError();
         }
     });
 }

@@ -8,9 +8,10 @@ router.post('/signin', ctx => {
 });
 
 router.post('/signup', ctx => {
-    const reqeustBody = ctx.request.body;
+    const {username, email, password } = ctx.request.body;
     try {
-        ctx.body = signup(reqeustBody.username, reqeustBody.email, reqeustBody.password);
+        ctx.body = signup(username, email, password);
+        console.log(ctx.body);
     } catch (error) {
         console.log(error);
         if (error.name == "userExistError"){
